@@ -18,7 +18,7 @@ services:
         ports:
             # 打开9980端口，访问 http://ip:9980 进行控制
             - 9980:80
-#            - 9981:8088
+            - 9981:8088
         # 设置共享内存2g（shared memory）,减少chrome崩溃
         shm_size: 2gb
         # 环境变量

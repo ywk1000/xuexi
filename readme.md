@@ -24,7 +24,7 @@ services:
         # 环境变量
         environment:
             # 将在每天0：25和18：25自动运行一次学习，防止忘记点UID开始学习
-            - CRONTIME=47 7,19 * * *
+            - CRONTIME=25 0,18 * * *
             # 每6小时运行一次
             # - CRONTIME=25 */6 * * *
             # 打开专项答题

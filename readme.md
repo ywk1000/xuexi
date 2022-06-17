@@ -39,3 +39,7 @@ services:
 如果进了容器还想修改 定时 可以
 crontab -e 
 然后修改时间即可
+由于容器里面没有文本编辑器,需要使用apt install 命令来安装编辑器
+比如:
+apt install vim -y
+就是安装vim 编辑器

@@ -16,13 +16,13 @@ services:
         ports:
             # 打开9980端口，访问 http://ip:9980 进行控制
             - 9980:80
-#            - 9981:8088
+            - 9981:8088
         # 设置共享内存2g（shared memory）,减少chrome崩溃
         shm_size: 2gb
         # 环境变量
         environment:
             # 将在每天0：25和18：25自动运行一次学习，防止忘记点UID开始学习
-            - CRONTIME=47 7,19 * * *
+            - CRONTIME=25 0,18 * * *
             # 每6小时运行一次
             # - CRONTIME=25 */6 * * *
             # 打开专项答题

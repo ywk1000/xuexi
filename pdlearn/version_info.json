@@ -1,0 +1,151 @@
+{
+    "techxuexi_version": "v20220126",
+    "notice": "欢迎使用 TechXueXi",
+    "least_version": "v20211020",
+    "old_version_warning": "您的版本太旧，请立即更新",
+    "techxuexi_update_log": [{
+        "version": "v20220126",
+        "info": "1.增加资源回收机制,减少栈内存溢出现象发生, 2.修复Error:could not find config file /xuexi/user/supervisord.conf的问题"
+    },{
+        "version": "v20220116",
+        "info": "修改了依赖项版本，修改issue模板"
+    },{
+        "version": "v20211221",
+        "info": "修改了适配新版本的二维码的滚动位置"
+    },{
+        "version": "v20211128",
+        "info": "修复和优化，优化登录提示，新增Dockerfile_arm32v7.dev"
+    },{
+        "version": "v20211124",
+        "info": "pushplus 支持按群组推送"
+    },{
+        "version": "v20211112",
+        "info": "docker: 守护增加微信模式，未启用。守护日志功能。优化守护提示"
+    },{
+        "version": "v20211111",
+        "info": "修复错误：打开非 user_status 的 json 文件可能造成问题。优化开发用脚本"
+    },{
+        "version": "v20211110",
+        "info": "修复import错误"
+    },{
+        "version": "v20211109",
+        "info": "docker: arm64v8 默认 supervisor 。修复bugs，优化逻辑，修复文件位置出错，修复 不存在的版本 等"
+    },{
+        "version": "v20211103",
+        "info": "docker: techxuexi web 推送优化。取消docker自动更新的代码。利用更新信息的文件，查询本地版本能否使用的功能。冲突处理，webui优化，更新Dockerfile_arm32v7，Dockerfile_arm64v8"
+    },{
+        "version": "v20211102",
+        "info": "docker: 修复微信子账号登录问题，增加list,update指令,techxuexi web 推送优化。"
+    },{
+        "version": "v20211101",
+        "info": "docker: 1. 部分功能采用及时回复; 2. 微信模板发送; 3. 增加微信模板配置项，增加说明文档 "
+    },{
+        "version": "v20211031",
+        "info": "docker: 1.增加微信互动功能; 2.微信token改为文件存储，方便主线程和守护线程共享; 3.修改bot消息发送，可以发送给指定用户; 4.增加文档说明; 5.增加默认配置文件的配置项; 6.微信暂时使用nohup启动，方便查阅日志，稳定后改为supervisord; 7.修复文档，get_score异常处理; 8.access_token过期后强制刷新; "
+    },{
+        "version": "v20211030",
+        "info": "优化参数配置 修复了无窗模式默认开启的问题，优化v指令"
+    },{
+        "version": "v20211029",
+        "info": "docker增加了web 推送支持。"
+    },{
+        "version": "v20211028",
+        "info": "docker增加了一个自循环方法，如果出现连接超时问题，就自己再次启动连接。"
+    },{
+        "version": "v20211027",
+        "info": "增加收集题库配置项，修复提示异常，增加全局消息"
+    },{
+        "version": "v20211025",
+        "info": "Docker enable supervisor，修改文档"
+    },{
+        "version": "v20211022",
+        "info": "fix refresh cookie error，修复q_text 使用异常，修改 mydriver.py 初始化参数，同步更新tgbot监听功能，更新上传题目地址"
+    },{
+        "version": "v20211018",
+        "info": "增加tg代理配置项。修复SendLoginQRcode的错误提示。取消自动打包arm32v7 docker（存在问题）。修改requirements.txt"
+    },{
+        "version": "v20211017",
+        "info": "适配armv7 32位docker"
+    },{
+        "version": "v20211015",
+        "info": "20211014开始，xuexi 官方修改了一些接口，如果继续使用老版本，可能会被封号。请使用 techxuexi-js，或者源码，docker。修复当日积分获取异常，转移tg日志到user目录，方便查看，修复shell中的if判断错误"
+    },{
+        "version": "v20211014",
+        "info": "推送模式的判断，如果使用tgbot推送，才以nohup的方式启动监听,增加supervisor，并设置默认配置，但是未在代码中启用，tgbot 新增指定账号学习,tgbot 新增更新代码指令，增加配置项，防止答题循环100次,修改文档等"
+    },{
+        "version": "v20211009",
+        "info": "优化配置文件读取方式，优化全局变量初始化，增加TG的配置项，优化二维码发送方式，增加tg的二维码发送，优化scheme跳转信息处理，文档优化，"
+    },{
+        "version": "v20211006",
+        "info": "新增强国题库查询，使用 challengeAnswerBank.py，增加Scheme环境变量，规范部分文件代码格式"
+    },{
+        "version": "v20211005",
+        "info": "优化答题时选项点击方式，多选没有答案时，默认全选，出现滑块验证时跳过答题，防止循环。降低 docker amd64 中浏览器版本（未完成）"
+    },{
+        "version": "v20211004",
+        "info": "修复部分题目找不到答案，增加ZhuanXiang环境变量，可以在无头模式下做专项答题，优化文档"
+    },{
+        "version": "v20211001",
+        "info": "增加Telegram bot的互动操作"
+    },{
+        "version": "v20210929",
+        "info": "增加telegram bot指令支持，调整bot通知代码与之前统一，增加学xi线程的异常捕获，修复名称获取不全的问题"
+    },{
+        "version": "v20210927",
+        "info": "增加Telegram通知；修改为多线程，多账号同时学习；修复通知中的乱码 ；获取用户完整用户名"
+    },{
+        "version": "v20210903",
+        "info": "增加docker多用户支持，pip使用镜像加速,修正PushMode应为字符串,更新md说明"
+    }, {
+        "version": "v20210902",
+        "info": "鲁棒性更新"
+    }, {
+        "version": "v20210830",
+        "info": "增加Docker支持，详情请见：https://github.com/TechXueXi/TechXueXi/blob/dev/DOCKER.md"
+    }, {
+        "version": "v20210829",
+        "info": "Docker功能增加"
+    }, {
+        "version": "v20210816",
+        "info": "程序启动时模块自检、windows一键更新脚本\nwindows一键更新方法：下载\nhttps://raw.githubusercontents.com/TechXueXi/TechXueXi/master/windows%E7%B3%BB%E7%BB%9Fgit_pull_%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0.bat\n并放置在项目根目录（即和SourcePackages文件夹同目录），然后双击运行"
+    }, {
+        "version": "v20210813",
+        "info": "新conf运行失败的补丁、整理readme.md"
+    }, {
+        "version": "v20210811",
+        "info": "采用新的conf配置文件格式"
+    }, {
+        "version": "v20210809",
+        "info": "整理代码、修复cookie expiry问题、优化input time.sleep"
+    }, {
+        "version": "v20210806",
+        "info": "菜单选项调整"
+    }, {
+        "version": "v20210802",
+        "info": "发送登陆二维码至微信（功能开发中）"
+    }, {
+        "version": "v20210730",
+        "info": "答题从前往后搜寻，避免题目太旧难以查找答案"
+    }, {
+        "version": "v20210713",
+        "info": "修复driver标题判定问题"
+    }, {
+        "version": "v20210712",
+        "info": "修复页面刷新提示问题、程序打开总是启动一个driver问题"
+    }, {
+        "version": "v20210711",
+        "info": "更新版本更新模块\\nchromedriver搜寻代码排版，新增version_info\\n视频学习规则更新，解决chrome89以后GL报错\\n生成题库数据，没完成"
+    }, {
+        "version": "v20210709",
+        "info": "输出更多有关 chrome driver 的错误信息"
+    }, {
+        "version": "v20210708",
+        "info": "修复在专项答题过程中查找元素按钮失败抛出异常的问题（重新遍历页面元素）"
+    }, {
+        "version": "v20210705",
+        "info": "修复卡在主界面不能运行的问题"
+    }, {
+        "version": "v20210704",
+        "info": "整理核心代码库"
+    }]
+}

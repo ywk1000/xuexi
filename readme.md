@@ -1,3 +1,5 @@
+docker-compose.yaml中的内容为:
+
 version: "3.6"
 
 services:
@@ -32,3 +34,8 @@ services:
             # 以下爱参数网页模式不需要，其他模式请根据实际情况修改
             # - "AccessToken={token}"
             # - "Secret={密钥}"
+
+
+如果进了容器还想修改 定时 可以
+crontab -e 
+然后修改时间即可

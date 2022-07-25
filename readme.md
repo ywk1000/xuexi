@@ -1,5 +1,5 @@
-
-#首先进入linux系统
+# 说明
+# 首先进入linux系统
 cd /opt
 # 下载一些文件
 git clone https://ghproxy.com/https://github.com/ywk1000/xuexi.git

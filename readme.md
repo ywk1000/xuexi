@@ -2,7 +2,7 @@
 # 首先进入linux系统
 cd /opt
 # 下载本仓库文件 用于替换
-git clone https://ghproxy.com/https://github.com/ywk1000/xuexi.git
+git clone https://github.com/ywk1000/xuexi.git
 # 进入xuexi目录
 cd xuexi
 # docker-compose 默认映射到/opt/xuexi

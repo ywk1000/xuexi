@@ -1,8 +1,8 @@
-version: "3.6"
+version: "3.7"
 
 services:
     xuexi:
-        image: techxuexi/techxuexi-arm64v8:latest
+        image: techxuexi/techxuexi-amd64:latest
         container_name: xuexi
         # 自动重启
         restart: always

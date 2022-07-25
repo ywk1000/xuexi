@@ -10,8 +10,8 @@ services:
         # 挂载目录
         volumes:
             - /opt/xuexi/user:/xuexi/user
-            - /opt/xuexi/static:/xuexi/static
-            - /opt/xuexi/pdlearn:/xuexi/pdlearn
+            #- /opt/xuexi/static:/xuexi/static
+            #- /opt/xuexi/pdlearn:/xuexi/pdlearn
         # 打开的端口
         ports:
             # 打开9980端口，访问 http://ip:9980 进行控制

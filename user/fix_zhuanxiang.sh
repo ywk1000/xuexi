@@ -4,10 +4,10 @@
 
 #echo"修复专项"
 cp /xuexi/user/answer_question.py /xuexi/pdlearn/answer_question.py
-sleep 10
+sleep 3
 #echo"修改web显示"
 cp /xuexi/user/index.html /xuexi/static/index.html
-sleep 10
+sleep 3
 #echo"修改定时随机延迟"
 cp /xuexi/user/run.sh /xuexi/run.sh
 #echo"修改完成"

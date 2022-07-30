@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.6"
 
 services:
     xuexi:
@@ -14,7 +14,7 @@ services:
             #- /opt/xuexi/pdlearn:/xuexi/pdlearn
         # 打开的端口
         ports:
-            # 打开9980端口，访问 http://ip:9980 进行控制
+            # 打开30080端口，访问 http://服务器ip:30080 进行控制
             - 30080:80
             - 30081:8088
         # 设置共享内存2g（shared memory）,减少chrome崩溃

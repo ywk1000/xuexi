@@ -1,11 +1,11 @@
-# 说明
+# 说明 本仓库源于Techxuexi仓库 地址:https://github.com/TechXueXi/TechXueXi 略作本地修改,主要是自用,感谢techxuexi的各位开发者!
 # 首先进入linux系统
 cd /opt
 # 下载本仓库文件 用于替换
 git clone https://github.com/ywk1000/xuexi.git
 # 进入xuexi目录
 cd xuexi
-# docker-compose 默认映射到/opt/xuexi
+# docker-compose 默认映射到/opt/xuexi 如果你的cpu架构不是x86 或者定时之类的修改,都可以详细去看看docker-compose.yaml文件, 里面都是照搬techxuexi的代码, 可以参照techxuexi的模板修改
 docker-compose up -d
 # 进入xuexi容器内
 docker exec -it xuexi bash

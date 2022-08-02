@@ -7,7 +7,7 @@ echo "删除缓存文件"
 cd /xuexi/user
 rm user_status.json web_listener.log article_video_index.json daily.log
 
-#随机延迟多少分钟
+#随机延迟多少秒
 sleep randNum
 
 echo "开始运行"

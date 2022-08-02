@@ -8,7 +8,7 @@ cd /xuexi/user
 rm user_status.json web_listener.log article_video_index.json daily.log
 
 #随机延迟多少秒
-sleep randNum
+sleep (randNum)
 
 echo "开始运行"
 /usr/local/bin/python /xuexi/pandalearning.py

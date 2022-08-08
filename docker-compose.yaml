@@ -32,3 +32,4 @@ services:
             # 以下爱参数网页模式不需要，其他模式请根据实际情况修改
             # - "AccessToken={token}"
             # - "Secret={密钥}"
+            - Scheme=https://ywk1000.github.io/xuexi/scheme.html?url=

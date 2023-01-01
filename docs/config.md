@@ -1,0 +1,125 @@
+## 配置文件<!-- {docsify-ignore} -->
+
+> 配置文件修改后需要重启程序才能生效
+
+```yaml
+# 刷课模式，默认为3，
+# 1：只刷文章何视频
+# 2：只刷文章和视频和每日答题
+# 3：刷文章和视频和每日答题每周答题和专项答题
+model: 3
+
+# 日志等级
+# panic
+# fatal
+# error
+# warn, warning
+# info
+# debug
+# trace
+log_level: "info"
+
+# 是否显示浏览器
+show_browser: false
+
+# 跳转学习强国的scheme,默认使用本仓库的action自建scheme,若需自行修改，可直接复制仓库下/docs/scheme.html到任意静态文件服务器
+scheme: "https://johlanse.github.io/study_xxqg/scheme.html?"
+
+
+push:
+  ding:
+    enable: false
+    access_token: ""
+    secret: ""
+  # 目前仅支持push-plus推送二维码，默认建议使用push-plus推送
+  # push-plus使用方法见：http://www.pushplus.plus/
+  push_plus:
+    enable: false
+    token: ""
+
+# telegram交互模式配置
+tg:
+  enable: false
+  chat_id: 0
+  token: ""
+  # telegram的代理，不配置默认走系统代理
+  proxy: ""
+  # 自定义tg的api,可通过cloudflare搭建，需自备域名
+  custom_api: "https://api.telegram.org"
+  # 白名单id,包括群id或者用户id,若为空，则允许所有群所有用户使用，若仅用于单人，直接配置上面的chat_id就可以
+  white_list:
+    - 123
+# 网页端配置
+web:
+  # 是否启用网页
+  enable: true
+  #
+  host: 0.0.0.0
+  port: 8080
+  # 网页端登录账号
+  account: admin
+  # 网页端登录密码
+  password: admin
+
+# 微信公众号测试号配置
+wechat:
+  # 是否启用
+  enable: false
+  # 开发者平台设置的token
+  token: ""
+  # 开发者平台的secret
+  secret: ""
+  # 开发者平台的appId
+  app_id: ""
+  # 发送登录消息需要使用的消息模板
+  # 模板标题，随意  模板内容：  点我登录，然后在浏览器中打开！！
+  login_temp_id: ""
+  # 发送普通消息需要使用的消息模板
+  # 模板标题：随意 模板内容： {{data.DATA}}
+  normal_temp_id: ""
+  # xxqg会每隔两小时左右检查所有用户的ck有效性，若开启该选项，会在检查失败时推送提醒消息
+  push_login_warn: false
+  # 微信管理员的openid,可点击关于按钮获得，配置后请重启程序
+  super_open_id: ""
+
+
+# pushDeer推送配置,详情参考psuhDeer官网：http://www.pushdeer.com/official.html
+push_deer:
+  enable: false
+  api: "https://api2.pushdeer.com"
+  token: ""
+
+# 登录重试配置
+retry:
+  # 重试次数
+  times: 0
+
+  # 重试之间的时间间隔，单位为分钟
+  intervals: 5
+
+
+# 设置是否定时执行学习程序，格式为cron格式
+# "9 19 * * *" 每天19点9分执行一次
+# "* 10 * * *” 每天早上十点执行一次
+cron: "0 0 * * *"
+
+# 定时任务随机等待时间，单位：分钟
+cron_random_wait: 0
+
+#windows环境自定义浏览器路径，仅支持chromium系列，需要将\替换为/或者\\
+edge_path: ""
+
+# 启动时等待时间，为了防止代理启动比软件慢而报错，默认不等待，单位秒
+start_wait: 0
+
+# 专项答题可接受的最小分值，因一天重复运行的时候，若专项答题未能答满会继续答新的一套题，会浪费题
+special_min_score: 10
+
+# 题目搜索的顺序，为true则从2018年最开始搜题，否则从现在最新开始搜题
+reverse_order: false
+
+# 定时任务运行时协程池的大小
+pool_size: 1
+
+
+```

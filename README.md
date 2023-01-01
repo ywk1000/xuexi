@@ -601,3 +601,10 @@ web框架采用gin框架
 - **\config\** 程序的配置文件config.yml的存放目录
 - **\config\logs\** 程序的日志文件存放目录
 - **\dist\** 留给用户存放自定义静态文件的目录，映射路径为 \dist，需手动添加并重启程序
+
+
+
+2023.1.1 修复 积分问题  下载文件: https://raw.githubusercontent.com/ywk1000/xuexi/study/study_xxqg_amd64.tar.gz
+或
+https://raw.githubusercontent.com/ywk1000/xuexi/study/study_xxqg_win.tar.gz
+并进行文件替换即可

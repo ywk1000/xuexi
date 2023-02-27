@@ -8,6 +8,9 @@ sleep 3
 echo "修改web显示"
 cp /xuexi/user/index.html /xuexi/static/index.html
 sleep 3
+echo "修复score获取接口"
+cp /xuexi/user/score.py /xuexi/pdlearn/score.py
+sleep 3
 echo "修改定时随机延迟"
 cp /xuexi/user/run.sh /xuexi/run.sh
 chmod +x /xuexi/run.sh

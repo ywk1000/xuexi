@@ -11,6 +11,12 @@ sleep 3
 echo "修复score获取接口"
 cp /xuexi/user/score.py /xuexi/pdlearn/score.py
 sleep 3
+echo "修复答题，绕过验证码机制"
+cp /xuexi/user/mydriver.py /xuexi/pdlearn/mydriver.py
+sleep 3
+cp /xuexi/user/chromedriver /xuexi/chromedriver
+chmod +775 /xuexi/chromedriver
+sleep 10
 echo "修改定时随机延迟"
 cp /xuexi/user/run.sh /xuexi/run.sh
 chmod +x /xuexi/run.sh

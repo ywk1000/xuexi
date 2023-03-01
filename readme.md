@@ -1,4 +1,4 @@
-# 说明 本仓库源于Techxuexi仓库 地址:https://github.com/TechXueXi/TechXueXi 略作本地修改,主要是自用,感谢techxuexi的各位开发者!
+﻿# 说明 本仓库源于Techxuexi仓库 地址:https://github.com/TechXueXi/TechXueXi 略作本地修改,主要是自用,感谢techxuexi的各位开发者!
 # 首先进入linux系统
 cd /opt
 # 下载本仓库文件 用于替换
@@ -11,8 +11,8 @@ docker-compose up -d
 docker exec -it xuexi bash
 # 进入 user 目录
 cd user
-# 修复专项答题及首页显示和随机延迟定时
-sh fix_zhuanxiang.sh
+# 修复诸多问题
+sh fix.sh
 # 退出容器
 exit
 # 容器外查看运行记录

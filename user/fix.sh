@@ -17,6 +17,9 @@ sleep 3
 cp /xuexi/user/chromedriver /xuexi/chromedriver
 chmod +775 /xuexi/chromedriver
 sleep 10
+echo "修复视频out of range"
+cp /xuexi/user/get_links.py /xuexi/pdlearn/get_links.py
+sleep 3
 echo "修改定时随机延迟"
 cp /xuexi/user/run.sh /xuexi/run.sh
 chmod +x /xuexi/run.sh

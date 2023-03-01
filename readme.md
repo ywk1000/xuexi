@@ -11,8 +11,8 @@ docker-compose up -d
 docker exec -it xuexi bash
 # 进入 user 目录
 cd user
-# 修复专项答题及首页显示和随机延迟定时
-sh fix_zhuanxiang.sh
+# 修复专项答题、首页显示、答题验证、答题翻页bug和随机延迟定时
+sh fix.sh
 # 退出容器
 exit
 # 容器外查看运行记录

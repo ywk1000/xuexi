@@ -86,7 +86,7 @@ def get_score(cookies):
     #                          headers={'Cache-Control': 'no-cache'}).content.decode("utf8")
     today = 0
     # today = int(json.loads(today_json)["data"]["score"])
-    score_json = requests.get("https://pc-proxy-api.xuexi.cn/api/score/days/listScoreProgress?sence=score&deviceType=2", cookies=jar,
+    score_json = requests.get("https://pc-proxy-api.xuexi.cn/delegate/score/days/listScoreProgress?sence=score&deviceType=2", cookies=jar,
                               headers={'Cache-Control': 'no-cache'}).content.decode("utf8")
     dayScoreDtos = json.loads(score_json)["data"]
     today = dayScoreDtos["totalScore"]

@@ -23,13 +23,17 @@ def generate_tiku_data(quiz_type=None, tip=None, option=None, answer=None, quest
     return data
 
 
+
 def find_available_quiz(quiz_type, driver_ans, uid):
-    pages = driver_ans.driver.find_elements_by_css_selector(
+    all_pages = driver_ans.driver.find_elements_by_css_selector(
         ".ant-pagination-item")
-    for p in range(0, int(driver_ans.driver.find_elements_by_css_selector(".ant-pagination-item")[-1].text), 1):  # (从最后一页开始往前找做题)从前往后找题，专项答题等没有那么离谱
+    pages = int(all_pages[-1].get_attribute('title'))
+    # page_next= driver_ans.driver.find_elements_by_css_selector('ant-pagination-item-link')
+    print('总页数' + str(pages))
+    for p in range(0, pages, 1):  # (从最后一页开始往前找做题)从前往后找题，专项答题等没有那么离谱
         time.sleep(0.5)
-        print('进入答题第' + str(p+1) + '页')
-        driver_ans.driver.find_elements_by_css_selector(".ant-pagination-next")[0].click()
+        print('进入答题第' + str(p + 1) + '页')
+        # page_next[0].click()
         time.sleep(0.5)
         dati = []
         if quiz_type == "weekly":  # 寻找可以做的题
@@ -39,7 +43,7 @@ def find_available_quiz(quiz_type, driver_ans, uid):
             # 可以使用 #app .items .item button:not(.ant-btn-background-ghost) 选择器，但会遗漏掉”继续答题“的部分
             dati = driver_ans.driver.find_elements_by_css_selector(
                 "#app .items .item button")
-        for i in range(len(dati)-1, -1, -1):  # 从最后一个遍历到第一个
+        for i in range(len(dati) - 1, -1, -1):  # 从最后一个遍历到第一个
             j = dati[i]
             if ("重新" in j.text or "满分" in j.text):
                 continue
@@ -47,6 +51,8 @@ def find_available_quiz(quiz_type, driver_ans, uid):
                 to_click = j
                 # auto.prompt("wait for Enter press...")
                 return to_click
+        page_next = driver_ans.driver.find_elements_by_css_selector('.ant-pagination-next')
+        page_next[0].click()
 
 
 @exception_catcher()
